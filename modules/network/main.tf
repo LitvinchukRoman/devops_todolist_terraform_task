@@ -40,7 +40,7 @@ resource "azurerm_public_ip" "linuxboxpip" {
   location            = var.location
   resource_group_name = var.resource_group_name
   allocation_method   = "Static"
-  sku                 = "Standard"  # <- Standard замість Basic
+  sku                 = "Standard" # <- Standard замість Basic
   domain_name_label   = "${var.dns_label}-${random_integer.random_suffix.result}"
 }
 
